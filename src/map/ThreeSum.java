@@ -1,8 +1,9 @@
 package map;
 
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 class ThreeSum {
     public List<List<Integer>> threeSum(int[] nums) {
@@ -23,8 +24,8 @@ class ThreeSum {
                 continue;
             }
             for (int j = i + 1; j < nums.length; j++) {
-                if (map.containsValue(0 - nums[i] - nums[j])) {
-                    lists.add(Arrays.asList(nums[i], nums[j], 0 - nums[i] - nums[j]));
+                if (map.containsValue(- nums[i] - nums[j])) {
+                    lists.add(Arrays.asList(nums[i], nums[j], - nums[i] - nums[j]));
                 }
             }
             map.put(i, nums[i]);
