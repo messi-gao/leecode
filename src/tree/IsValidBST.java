@@ -2,12 +2,15 @@ package tree;
 
 
 /**
+ *
+ * 98. 验证二叉搜索树
+ *
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 class IsValidBST {
@@ -22,8 +25,8 @@ class IsValidBST {
         if (lower != null && val <= lower) return false;
         if (upper != null && val >= upper) return false;
 
-        if (! helper(node.right, val, upper)) return false;
-        if (! helper(node.left, lower, val)) return false;
+        if (!helper(node.right, val, upper)) return false;
+        if (!helper(node.left, lower, val)) return false;
         return true;
     }
 
