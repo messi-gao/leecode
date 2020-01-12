@@ -1,5 +1,10 @@
 package tree;
 
+/**
+ * 111. 二叉树的最小深度
+ *
+ * @author gaoyh
+ */
 public class MinLength {
     public int minDepth(TreeNode root) {
         if (root == null) {

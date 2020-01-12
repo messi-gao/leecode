@@ -1,6 +1,11 @@
 package recursion;
 
-class MyPow {
+/**
+ * 50. Pow(x, n)
+ * 实现 pow(x, n) ，即计算 x 的 n 次幂函数。
+ * @author gaoyh
+ */
+public class MyPow {
     public double help(double x, long n) {
         if (n == 0) {
             return 1;

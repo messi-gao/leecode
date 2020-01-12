@@ -1,5 +1,9 @@
 package tree;
 
+/**
+ * 235. 二叉搜索树的最近公共祖先
+ * @author gaoyh
+ */
 public class LowestCommonAncestor {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (p.val < root.val && q.val < root.val) {
