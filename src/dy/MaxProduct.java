@@ -1,7 +1,5 @@
 package dy;
 
-import java.util.List;
-
 public class MaxProduct {
     public int maxProduct(int[] nums) {
         if (nums == null) {
