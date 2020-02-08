@@ -29,15 +29,22 @@ import java.util.List;
  */
 public class MinimumTotal {
     public int minimumTotal(List<List<Integer>> triangle) {
-        int row = triangle.size();
-        int[] minlen = new int[row + 1];
-        for (int i = row - 1; i >= 0; i--) {
-            //第i行有i+1个数字
-            for (int j = 0; j < triangle.get(i).size(); j++) {
-                minlen[j] = Math.min(minlen[j], minlen[j + 1]) + triangle.get(i).get(j);
+        int size = triangle.size();
+        int[] result = new int[size];
+
+        List<Integer> last = triangle.get(size - 1);
+        for (int i = 0; i < size; i++) {
+            result[i] = last.get(i);
+        }
+
+        for (int i = size - 2; i >= 0; i--) {
+            List<Integer> list = triangle.get(i);
+            for (int j = 0; j < list.size(); j++) {
+                result[j] = Math.min(result[j], result[j + 1]) + list.get(j);
             }
         }
-        return minlen[0];
+
+        return result[0];
     }
 
     public static void main(String[] args) {
