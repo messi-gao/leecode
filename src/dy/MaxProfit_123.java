@@ -36,7 +36,7 @@ class MaxProfit_123 {
         int n = prices.length;
         int[][][] dp = new int[n][3][2];
         for (int i = 0; i < prices.length; i++) {
-            for (int k = 2; k >= 1; k--) {
+            for (int k = 1; k <= 2; k++) {
                 if (i == 0) {
                     dp[i][k][0] = 0;
                     dp[i][k][1] = -prices[i];
