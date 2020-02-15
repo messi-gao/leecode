@@ -28,18 +28,18 @@ public class CycleLinkList {
 
 
     private static boolean hasCycle(ListNode head) {
-        if (head == null || head.next == null || head.next.next == null) {
+        if (head == null || head.next == null) {
             return false;
         }
-        ListNode fast = head.next.next;
-        ListNode slow = head.next;
-        while (slow.next != null && fast.next != null && fast.next.next != null) {
+        ListNode slow = head;
+        ListNode fast = head.next;
+        while (slow != fast) {
+            if (fast == null || fast.next == null) {
+                return false;
+            }
             slow = slow.next;
             fast = fast.next.next;
-            if (slow == fast) {
-                return true;
-            }
         }
-        return false;
+        return true;
     }
 }
