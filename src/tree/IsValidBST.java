@@ -25,9 +25,7 @@ class IsValidBST {
         if (lower != null && val <= lower) return false;
         if (upper != null && val >= upper) return false;
 
-        if (!helper(node.right, val, upper)) return false;
-        if (!helper(node.left, lower, val)) return false;
-        return true;
+        return helper(node.right, val, upper) && helper(node.left, lower, val);
     }
 
     public static void main(String[] args) {
