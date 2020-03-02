@@ -36,7 +36,6 @@ class HalfSearch {
                 end = half - 1;
             }
         }
-
         return -1;
     }
 
