@@ -28,7 +28,7 @@ class HalfSearch {
         while (begin <= end) {
             half = begin + (end - begin) / 2;
             if (target == nums[half]) {
-                return begin;
+                return half;
             }
             if (target > nums[half]) {
                 begin = half + 1;
