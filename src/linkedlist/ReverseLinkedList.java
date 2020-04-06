@@ -17,9 +17,8 @@ public class ReverseLinkedList {
         printLinkedList(reverse(ListNode.node1));
     }
 
-    private static ListNode reverse(ListNode head) {
+    private static ListNode reverse(ListNode now) {
         ListNode prev = null;
-        ListNode now = head;
         while (now != null) {
             ListNode next = now.next;
             now.next = prev;
